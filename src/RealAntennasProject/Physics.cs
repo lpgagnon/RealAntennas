@@ -155,6 +155,7 @@ namespace RealAntennas
         }
         private static double AntennaMicrowaveTemp(RealAntenna rx) =>
             ((rx.ParentNode as RACommNode)?.ParentBody is CelestialBody) ? rx.AMWTemp : rx.TechLevelInfo.ReceiverNoiseTemperature;
+
         private static double AtmosphericTemp(RealAntenna rx, Vector3d origin)
         {
             if (rx.ParentNode is RACommNode rxNode && rxNode.ParentBody != null)
